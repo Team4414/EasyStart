@@ -19,7 +19,10 @@ public class Robot extends TimedRobot {
    * initialization code.
    */
   @Override
-  public void robotInit() {}
+  public void robotInit() {
+
+    // new robot 
+  }
 
   @Override
   public void robotPeriodic() {}

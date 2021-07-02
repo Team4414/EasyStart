@@ -1,7 +1,7 @@
 
 /**
    * Imports: these are imports from the vender libraries that you should have installed
-   * You generally don't have to worry about these; VS code will will them in for you
+   * You generally don't have to worry about these; VS code will fill them in for you
    * In the case that VS code doesn't import automatically, you can hover over the word and click 
    * "quick fix", which will give you the choice to import manually. 
    */

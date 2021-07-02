@@ -4,6 +4,9 @@
 
 package frc.robot;
 
+import com.ctre.phoenix.motorcontrol.ControlMode;
+import com.ctre.phoenix.motorcontrol.can.TalonFX;
+
 import edu.wpi.first.wpilibj.TimedRobot;
 
 /**
@@ -13,7 +16,10 @@ import edu.wpi.first.wpilibj.TimedRobot;
  * project.
  */
 public class Robot extends TimedRobot {
-  
+
+
+  TalonFX newTalon; 
+
   /**
    * This function is run when the robot is first started up and should be used for any
    * initialization code.
@@ -21,7 +27,7 @@ public class Robot extends TimedRobot {
   @Override
   public void robotInit() {
 
-    // new robot 
+    newTalon = new TalonFX(0);
   }
 
   @Override
@@ -34,7 +40,9 @@ public class Robot extends TimedRobot {
   public void autonomousPeriodic() {}
 
   @Override
-  public void teleopInit() {}
+  public void teleopInit() {
+      newTalon.set(ControlMode.PercentOutput, 30); 
+  }
 
   @Override
   public void teleopPeriodic() {}
@@ -43,7 +51,9 @@ public class Robot extends TimedRobot {
   public void disabledInit() {}
 
   @Override
-  public void disabledPeriodic() {}
+  public void disabledPeriodic() {
+    newTalon.set(ControlMode.PercentOutput, 0); 
+  }
 
   @Override
   public void testInit() {}

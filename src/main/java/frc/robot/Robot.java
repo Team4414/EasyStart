@@ -29,7 +29,7 @@ public class Robot extends TimedRobot {
     newTalon = new TalonFX(0);
 
   /**
-   * Instantiation: the "new" keywork lets the program know that memory is being allocated for our new object
+   * Instantiation: the "new" keyword lets the program know that memory is being allocated for our new object
    * The 0 in the parenthesis is the ID number of the motor (we could put any valid ID number and control different 
    * motors)
    */

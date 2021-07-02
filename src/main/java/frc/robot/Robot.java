@@ -1,7 +1,10 @@
-// Copyright (c) FIRST and other WPILib contributors.
-// Open Source Software; you can modify and/or share it under the terms of
-// the WPILib BSD license file in the root directory of this project.
 
+/**
+   * Imports: these are imports from the vender libraries that you should have installed
+   * You generally don't have to worry about these; VS code will will them in for you
+   * In the case that VS code doesn't import automatically, you can hover over the word and click 
+   * "quick fix", which will give you the choice to import manually. 
+   */
 package frc.robot;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
@@ -9,20 +12,16 @@ import com.ctre.phoenix.motorcontrol.can.TalonFX;
 
 import edu.wpi.first.wpilibj.TimedRobot;
 
-/**
- * The VM is configured to automatically run this class, and to call the functions corresponding to
- * each mode, as described in the TimedRobot documentation. If you change the name of this class or
- * the package after creating this project, you must also update the build.gradle file in the
- * project.
- */
-public class Robot extends TimedRobot {
 
+public class Robot extends TimedRobot {
+/**
+   * Declaration: we are letting the program know that there will be an object of type TalonFX 
+   * and that we're naming it "newTalon" (it can be named anything you want). 
+   * The TalonFX is a type of speed controller for the robot motors. 
+   */
 
   TalonFX newTalon; 
-  /**
-   * Declaration: we are letting the program know that there will be an object of type TalonFX 
-   * and that we're naming it "newTalon" (it can be named anything you want)
-   */
+
 
   @Override
   public void robotInit() {

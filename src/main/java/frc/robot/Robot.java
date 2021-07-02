@@ -19,15 +19,25 @@ public class Robot extends TimedRobot {
 
 
   TalonFX newTalon; 
-
   /**
-   * This function is run when the robot is first started up and should be used for any
-   * initialization code.
+   * Declaration: we are letting the program know that there will be an object of type TalonFX 
+   * and that we're naming it "newTalon" (it can be named anything you want)
    */
+
   @Override
   public void robotInit() {
 
     newTalon = new TalonFX(0);
+
+  /**
+   * Instantiation: the "new" keywork lets the program know that memory is being allocated for our new object
+   * The 0 in the parenthesis is the ID number of the motor (we could put any valid ID number and control different 
+   * motors)
+   */
+
+
+  
+
   }
 
   @Override
@@ -42,6 +52,10 @@ public class Robot extends TimedRobot {
   @Override
   public void teleopInit() {
       newTalon.set(ControlMode.PercentOutput, 30); 
+  /**
+   * In teletopInit (when we turn on the teleop mode on Driver Station), we are setting the power of the motor "newTalon"
+   * We are using control mode (percent output), and 30 is our output value 
+   */
   }
 
   @Override
@@ -53,6 +67,10 @@ public class Robot extends TimedRobot {
   @Override
   public void disabledPeriodic() {
     newTalon.set(ControlMode.PercentOutput, 0); 
+  /**
+   * In disabledPeriodic, we are setting the output value of the motor to 0 periodically. 
+   */
+    
   }
 
   @Override
